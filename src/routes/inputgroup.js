@@ -3,6 +3,6 @@ const router = express.Router();
 
 const inputGroupController = require("../app/controllers/InputGroupController");
 
-router.use("/", inputGroupController.index);
+router.get("/", inputGroupController.index);
 
 module.exports = router;
