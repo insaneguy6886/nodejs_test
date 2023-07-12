@@ -53,7 +53,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Xoá meme?</h5>
+        <h5 class="modal-title">Xoá vĩnh viễn meme?</h5>
         <button
           type="button"
           class="close"
@@ -64,11 +64,11 @@
         </button>
       </div>
       <div class="modal-body">
-        <p>Bạn chắc chắn muốn xoá meme này?</p>
+        <p>Hành động này không thể khôi phục. Bạn vẫn muốn xoá meme này?</p>
       </div>
       <div class="modal-footer">
         <button id="btn-delete-course" type="button" class="btn btn-danger">Xoá
-          luôn</button>
+          vĩnh viễn</button>
         <button
           type="button"
           class="btn btn-secondary"
@@ -90,7 +90,7 @@
   $('.btn-restore'); $('#delete-course-modal').on('show.bs.modal', function
   (event) { var button = $(event.relatedTarget); courseId = button.data('id');
   }); btnDeleteCourse.onclick = function () { deleteForm.action = '/courses/' +
-  courseId + '?_method=DELETE'; deleteForm.submit(); };
+  courseId + '/force?_method=DELETE'; deleteForm.submit(); };
   restoreBtn.click(function(e) { e.preventDefault(); var courseId =
   $(this).data('id'); restoreForm.action = '/courses/' + courseId +
   '/restore?_method=PATCH'; restoreForm.submit(); }) });
